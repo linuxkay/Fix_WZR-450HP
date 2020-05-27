@@ -1,0 +1,135 @@
+/*
+Theme Name: Twenty Seventeen Child
+Theme URI: https://wordpress.org/themes/twentyseventeen/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Twenty Seventeen Child Theme
+Template:     twentyseventeen
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* フロントページの変なオフセットを消す(1カラム用) */
+/*
+@media screen and (min-width: 48em) {
+  .blog:not(.has-sidebar) #primary article, .archive:not(.page-one-column):not(.has-sidebar) #primary article, .search:not(.has-sidebar) #primary article, .error404:not(.has-sidebar) #primary .page-content
+  {
+    width: 100%;
+  }
+}
+*/
+
+/* 本文カスタマイズ */
+.entry-title {
+        font-weight: normal;
+        font-size: 1.7rem;
+        padding: 0.5rem 0.5rem;
+        border-bottom: solid thin black;
+}
+.entry-content h2 {
+        font-weight: bold;
+        font-size: 1.6rem;
+        border-bottom: solid thin black;
+        padding-left: 0.7rem;
+        clear: both;
+}
+.entry-content h3 {
+        font-weight: normal;
+        font-size: 1.5rem;
+        border-bottom: dashed thin black;
+}
+.entry-content em {
+        font-size: 0.95rem; /* 斜体 */
+}
+
+
+/* Google AdSense */
+p.ad-label {
+        clear:both; /* スポンサーリンクは回りこませない */
+}
+iframe {
+        float: left;
+        margin-right: 1.4rem;
+        margin-bottom: 1rem;
+}
+
+/* 箇条書き */
+.entry-content ul,
+.entry-content ol {
+        margin-left: 2rem;
+        clear: both;
+}
+
+/* 見出しに番号を付ける */
+h2.entry-title,
+body.single {
+        counter-reset: section2;
+}
+.entry-content h2 {
+        counter-reset: section3;
+}
+.entry-content h2::before {
+        counter-increment: section2;
+        content: counter(section2) ". ";
+}
+.entry-content h3::before {
+        counter-increment: section3;
+        content: counter(section2) "." counter(section3) ". ";
+}
+/* 固定ページでは番号をつけない */
+.entry-content #kotei h2::before,
+.entry-content #kotei h3::before {
+        content: "";
+}
+
+/* 本文中に箱を設置 */
+.entry-content .box {
+        border: solid thin black;
+        padding: 0.3rem;        
+        margin-bottom: 2.0rem;
+}
+
+/* カテゴリ記事一覧 */
+.entry-content .bottom-others {
+        text-decoration: none;
+}
+.entry-content .bottom-others h2 {
+        font-size: 1.0rem;
+        border-top: solid thin black;
+        border-bottom: solid thin black;
+        border-left: none;
+        padding: 0.5rem 0.5rem;
+        clear: both;
+}
+.entry-content .bottom-others h3::before {
+        content: ""; /* 番号をつけない */
+}
+
+.entry-content .bottom-others ul {
+        font-size: 0.9rem;
+}
+/* リンクの下線を消す */
+li.sga-ranking-list a,
+.entry-content .bottom-others li a:link,
+.entry-content .bottom-others li a:hover,
+.entry-content .bottom-others li a:visited
+{
+    box-shadow: none;
+    text-decoration: none;
+}
+
+#kotei li a,
+.entry-content .bottom-others li a:link,
+.entry-content .bottom-others li a:hover,
+.entry-content .bottom-others li a:visited
+{
+	color: blue;
+    box-shadow: none;
+    text-decoration: none;
+}
