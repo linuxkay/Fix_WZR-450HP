@@ -1,7 +1,0 @@
-/* JS */ gapi.loaded_2(function(_){var window=this;
-var L0=["https://www.youtube.com"];
-var M0=function(){this.PF=null};M0.prototype.SZ=function(){return{eurl:window.location.href.split("#")[0]}};var N0=function(a){a.PF||(a.PF=_.nm(L0));return a.PF};
-(function(){var a=new M0;_.Wo({0:"ytsubscribe",5:function(b,c){"e"==b&&c[5].register("_ready",a.SZ,N0(a))}})})();
-
-});
-// Google Inc.
