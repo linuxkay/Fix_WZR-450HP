@@ -13,7 +13,7 @@ Router does not boot after that.
 
 So decided to fix by uploading factory firmware to fix it.
 
-# Pictures
+## Pictures
 
 ![IMG_20200223_135339](https://user-images.githubusercontent.com/9047935/83080362-f0a51a00-a0b8-11ea-939a-5d3a7adc912c.jpg)
 
